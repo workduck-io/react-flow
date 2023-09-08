@@ -1,18 +1,18 @@
 import React, { memo } from 'react';
 
-import FlowRenderer from '../FlowRenderer';
-import NodeRenderer from '../NodeRenderer';
-import EdgeRenderer from '../EdgeRenderer';
-import Viewport from '../Viewport';
 import useOnInitHandler from '../../hooks/useOnInitHandler';
 import {
-  NodeTypesWrapped,
-  EdgeTypesWrapped,
   ConnectionLineType,
-  KeyCode,
-  ReactFlowProps,
   CoordinateExtent,
+  EdgeTypesWrapped,
+  KeyCode,
+  NodeTypesWrapped,
+  ReactFlowProps,
 } from '../../types';
+import EdgeRenderer from '../EdgeRenderer';
+import FlowRenderer from '../FlowRenderer';
+import NodeRenderer from '../NodeRenderer';
+import Viewport from '../Viewport';
 
 export interface GraphViewProps
   extends Omit<ReactFlowProps, 'onSelectionChange' | 'nodes' | 'edges' | 'nodeTypes' | 'edgeTypes'> {
@@ -149,6 +149,8 @@ const GraphView = ({
           elevateEdgesOnSelect={!!elevateEdgesOnSelect}
           rfId={id}
         />
+         <div className="react-flow__edgelabel-renderer" id="edgelabel-portal" />
+
         <NodeRenderer
           nodeTypes={nodeTypes}
           onNodeClick={onNodeClick}
