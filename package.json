@@ -1,5 +1,5 @@
 {
-  "name": "react-flow-renderer",
+  "name": "@workduck-io/react-flow",
   "version": "10.3.17",
   "engines": {
     "node": ">=14"
