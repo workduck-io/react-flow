@@ -17,6 +17,26 @@ A highly customizable React component for building interactive graphs and node-b
 
 ----
 
+Added functionality from https://github.com/wbkd/react-flow/pull/2535/files
+
+## Run locally
+
+```
+yarn
+yarn build
+yarn link
+cd node_modules/react
+yarn link
+cd ../react-dom
+yarn link
+cd ../../example
+yarn
+yarn link react
+yarn link react-dom
+yarn link react-flow-renderer
+
+```
+
 ## Key Features
 
 - **Easy to use:** Seamless zooming and panning, single- and multi selection of graph elements and keyboard shortcuts are supported out of the box
